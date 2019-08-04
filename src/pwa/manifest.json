@@ -1,0 +1,20 @@
+{
+  "name": "Street Support Network",
+  "short_name": "SSN",
+  "icons": [
+    {
+      "src": "/assets/img/map-pin.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/img/map-pin.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }  
+  ],
+  "start_url": "https://streetsupport.net",
+  "display": "standalone",
+  "background_color": "#086049",
+  "theme_color": "#086049"
+}

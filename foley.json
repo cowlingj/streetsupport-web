@@ -14,7 +14,8 @@
     "pages": "src/pages/",
     "partials": "src/partials/",
     "data": "src/data/",
-    "generatedData": "src/data/generated/"
+    "generatedData": "src/data/generated/",
+    "pwa": "src/pwa"
   },
   "autoprefixer": {
     "browsers": ["last 3 versions", "safari 8", "ios 8", "android 4", "android 3"]
@@ -49,6 +50,10 @@
       },
       "metalsmith-mapsite": {
         "hostname": "https://streetsupport.net"
+      },
+      "metalsmith-static": {
+        "src": "./src/pwa",
+        "dest": "/"
       }
     }
   }

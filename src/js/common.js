@@ -13,6 +13,26 @@ let removeNoJS = () => {
   html.classList.add('js')
 }
 
+let registerServiceWorker = () => {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function (registration) {
+          // Registration was successful
+          console.log(
+            'ServiceWorker registration successful with scope: ',
+            registration.scope
+          )
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err)
+        })
+    })
+  } else {
+    console.log('service workers not supported')
+  }
+}
+
 // <=IE10 classlist polyfill
 import 'classlist.js'
 
@@ -78,5 +98,6 @@ print.init()
 fastClickCheck()
 Svg4everybody()
 twitterShareWindow()
+registerServiceWorker()
 
 headerCitySelector.init()
